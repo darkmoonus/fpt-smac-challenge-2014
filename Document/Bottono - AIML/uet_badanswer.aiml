@@ -1,0 +1,330 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+
+<category>
+<pattern>BAD ANSWER</pattern> 
+<template>
+<think>
+	<set name="badanswer-input"><input index="2" /></set>
+	<set name="badanswer-that"><that index="2,1" /></set>
+	<set name="badanswer-that-full"><that index="2,*" /></set>
+	<set name="topic">badanswer-prelim</set>
+</think>
+Bạn có muốn sửa câu trả lời của mình cho "<get name="badanswer-input"/>"?
+</template>
+</category>
+
+<topic name="BADANSWER-PRELIM">
+
+<category>
+<pattern>_</pattern> 
+<template>
+<think><set name="star"><star /></set></think>
+<condition>
+<li name="star" value="có">
+	Được rồi, vậy mình nên trả lời thế nào nhỉ?<think><set name="topic">learning new answers</set></think>
+</li>
+<li name="star" value="không">
+	Uh, mình sẽ giữ câu trả lời cũ của mình nhé.<think><set name="topic">learning new answers</set></think>
+</li>
+<li>Có hay Không?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>_ _</pattern> 
+<template><sr /></template>
+</category>
+
+</topic>
+
+
+<category>
+<pattern>_</pattern> 
+<that>Được rồi, vậy mình nên trả lời thế nào nhỉ?</that> 
+<template>
+"<set name="badanswer-newresp"><input index="1" /></set>..."?
+<condition>
+<li name="badanswer-that" value="*">
+	<think><set name="topic">BADANSWER</set></think>
+	Liệu có phải phụ thuộc vào câu trả lời trước của mình phải không nhỉ, "<get name="badanswer-that-full" />"? 
+</li>
+<li>
+	<think><set name="topic">BADANSWER2</set></think>
+	Bạn muốn mình ghi nhớ câu trả lời mới này chứ?
+</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>_ _</pattern> 
+<that>Được rồi, vậy mình nên trả lời thế nào nhỉ?</that> 
+<template><sr /></template>
+</category>
+
+
+<topic name="BADANSWER">
+
+<category>
+<pattern>_</pattern> 
+<template>
+<think>
+	<set name="star"><star /></set>
+	<set name="response1"><response index = "1" /></set>
+	<set name="response2"><response index = "2" /></set>
+	<condition>
+		<li name="response2" value="Được rồi, vậy mình nên trả lời thế nào nhỉ?">
+		<set name="badanswer-newresp"><request index = "1" /></set>
+		</li>
+	</condition>
+</think>
+<condition>
+<li name="response1" value="Được rồi, vậy mình nên trả lời thế nào nhỉ?"></li>
+<li name="star" value="không">Mình sẽ nhớ để đáp lại là "<get name="badanswer-newresp" />" khi bạn nói, "<get name="badanswer-input" />" 
+<learn>
+	<category>
+	<pattern>
+		<eval><uppercase><get name="badanswer-input" /></uppercase></eval>
+	</pattern>
+	<template>
+		<eval><get name="badanswer-newresp" /></eval>
+	</template>
+	</category>
+</learn>
+<think><set name="topic">learning new answers</set></think>
+</li>
+<li name="star" value="có">Mình sẽ nhớ để đáp lại là "<get name="badanswer-newresp" />" khi bạn nói, "<get name="badanswer-input" />" if I have just said "<get name="badanswer-that-full" />" 
+<learn>
+	<category>
+	<pattern>
+		<eval><uppercase><get name="badanswer-input" /></uppercase></eval>
+	</pattern>
+	<that>
+		<eval><uppercase><get name="badanswer-that" /></uppercase></eval>
+	</that>
+	<template>
+	<eval><get name="badanswer-newresp" /></eval>
+	</template>
+	</category>
+</learn>
+<think><set name="topic">learning new answers</set></think>
+</li>
+<li>Có or Không?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>_ _</pattern> 
+<template><sr /></template>
+</category>
+
+</topic>
+
+<topic name="BADANSWER2">
+
+<category>
+<pattern>_</pattern> 
+<template>
+<think>
+	<set name="star"><star /></set>
+	<set name="response1"><response index = "1" /></set>
+	<set name="response2"><response index = "2" /></set>
+	<condition>
+		<li name="response2" value="Được rồi, vậy mình nên trả lời thế nào nhỉ?">
+		<set name="badanswer-newresp"><request index = "1" /></set>
+		</li>
+	</condition>
+</think>
+<condition>
+<li name="response1" value="Được rồi, vậy mình nên trả lời thế nào nhỉ?"></li>
+<li name="star" value="có">Fine. Mình sẽ nhớ để đáp lại là "<get name="badanswer-newresp" />" khi bạn nói, "<get name="badanswer-input" />" 
+<learn>
+	<category>
+	<pattern>
+		<eval><uppercase><get name="badanswer-input" /></uppercase></eval>
+	</pattern>
+	<template>
+		<eval><get name="badanswer-newresp" /></eval>
+	</template>
+	</category>
+</learn>
+<think><set name="topic">learning new answers</set></think>
+</li>
+<li name="star" value="không">Uh, mình sẽ giữ câu trả lời cũ của mình nhé.
+<think><set name="topic">learning new answers</set></think>
+</li>
+<li>có or không?</li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>_ _</pattern> 
+<template><sr /></template>
+</category>
+
+</topic>
+
+<category>
+<pattern>SAI</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>TRẢ LỜI SAI</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>TRẢ LỜI KHÔNG ĐÚNG</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>THẾ MÀ CŨNG TRẢ LỜI</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>SAI RỒI</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>CHẢ ĐÚNG GÌ CẢ</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>NÓI SAI RỒI</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>TRẢ LỜI CHÁN QUÁ</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>TRẢ LỜI TỆ THẬT</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>^ TRẢ LỜI KHÔNG CHUẨN ^</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>^ TRẢ LỜI KHÔNG ĐÚNG</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>^ TRẢ LỜI KHÔNG HỢP LÝ</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>SAI BÉT NHÈ</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>CHẢ ĐÚNG ^</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>TRẢ LỜI CHÁN ^</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>CHÁN THẾ KHÔNG BIẾT</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>^ TRẢ LỜI NHẢM ^</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>^ NHẢM NHÍ ^</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+
+<category>
+<pattern>THẾ MÀ CŨNG ĐÒI TRẢ LỜI</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>SAI BÉT</pattern>
+<template><srai>BAD ANSWER</srai>
+</template>
+</category>
+
+<category>
+<pattern>SHIT</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>TRẢ LỜI NGU THẾ</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>NGU QUÁ</pattern>
+<template><srai>BAD ANSWER</srai></template>
+</category>
+
+<category>
+<pattern>MÌNH DẠY BẠN TRẢ LỜI NHÉ</pattern>
+<template>Nếu mình câu đáp lại của mình không tốt, bạn có thế nói với mình là "trả lời tệ quá" và sau đó giúp mình có câu trả lời tốt hơn nhé!</template>
+</category>
+
+<category>
+<pattern>BẠN CÓ MUỐN HỌC TRẢ LỜI KHÔNG</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+<category>
+<pattern>MUỐN HỌC CHỨ</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+<category>
+<pattern>^ DẠY BẠN TRẢ LỜI ^</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+<category>
+<pattern>MUỐN HỌC ^</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+<category>
+<pattern>SẼ HỌC ^</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+<category>
+<pattern>NẾU ^ SẼ HỌC ^</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+<category>
+<pattern>^ HỌC TRẢ LỜI ^</pattern>
+<template><srai>MÌNH DẠY BẠN TRẢ LỜI NHÉ</srai></template>
+</category>
+
+</aiml>
+
+    

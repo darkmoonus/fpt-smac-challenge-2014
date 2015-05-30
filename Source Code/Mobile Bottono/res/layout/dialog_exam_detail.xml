@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+	
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/iconchecked"
+        android:textSize="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:layout_marginRight="10dp"
+        android:text="Set question quantity and duration"/>
+    
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+
+        <uet.invincible.customize.MyEditText
+            android:id="@+id/dialog_exam_detail_qtt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bound"
+            android:hint="Quantity"
+            android:padding="10dp"
+            android:inputType="number"
+            android:textColor="@color/gray"
+            android:textSize="13dp" />
+
+        <uet.invincible.customize.MyEditText
+            android:id="@+id/dialog_exam_detail_duration"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/bound"
+            android:hint="Timer(s)"
+            android:padding="10dp"
+            android:inputType="number"
+            android:textColor="@color/gray"
+            android:textSize="13dp" />
+
+        <uet.invincible.customize.MyTextView
+            android:id="@+id/dialog_exam_detail_start"
+            android:layout_width="80dp"
+            android:layout_marginLeft="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray"
+            android:gravity="center"
+            android:text="Start"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </LinearLayout>
+
+</LinearLayout>

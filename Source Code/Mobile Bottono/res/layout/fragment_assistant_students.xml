@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <uet.invincible.customize.MyTextView
+            android:id="@+id/fragment_student_manager_add"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/student_magager_add" />
+
+        <uet.invincible.customize.MyTextView
+            android:id="@+id/fragment_student_manager_delete_all"
+            android:layout_width="23dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/delete" />
+
+        <uet.invincible.customize.MyEditText
+            android:id="@+id/fragment_student_manager_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bound"
+            android:hint="Search students"
+            android:lines="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="14dp" />
+
+        <uet.invincible.customize.MyTextView
+            android:id="@+id/fragment_student_manager_search_button"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/search"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <uet.invincible.libs.pulltorefresh.PullToRefreshListView
+        android:id="@+id/fragment_student_manager_listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:scrollbars="none" >
+    </uet.invincible.libs.pulltorefresh.PullToRefreshListView>
+
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/dialog_options_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <uet.invincible.assistant.customize.MyTextView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/exit" />
+
+        <uet.invincible.assistant.customize.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="20dp"
+            android:text="Exit Bottono"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

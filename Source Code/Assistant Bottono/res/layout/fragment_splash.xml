@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <com.fpt.robot.vision.RobotCameraPreviewView
+                android:id="@+id/fragment_splash_camara_preview"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:background="@drawable/splash_avatar_bound" />
+
+            <TextView
+                android:id="@+id/fragment_splash_avatar_demo"
+                android:layout_width="220dp"
+                android:layout_height="220dp"
+                android:background="@drawable/splash_avatar_demo_bound_giap" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <uet.invincible.assistant.customize.MyGifView
+                    android:visibility="gone"
+                    android:id="@+id/splash_logo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Name: "
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <uet.invincible.assistant.customize.MyTextView
+                android:id="@+id/fragment_splash_txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Name empty"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/splash_trick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Level: "
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <uet.invincible.assistant.customize.MyTextView
+                android:id="@+id/fragment_splash_txt_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Level empty"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Mobile : "
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <uet.invincible.assistant.customize.MyTextView
+                android:id="@+id/fragment_splash_txt_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:lines="1"
+                android:text="Mobile empty"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Email: "
+                android:textColor="@color/gray"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <uet.invincible.assistant.customize.MyTextView
+                android:id="@+id/fragment_splash_txt_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Email empty"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <uet.invincible.assistant.customize.MyTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:lines="3"
+            android:text="If you cannot login to system, you may not be have access to entry or your account was blocked. Please contact us for more details."
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/splash_start_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/floating_button_start" />
+    </LinearLayout>
+
+</LinearLayout>

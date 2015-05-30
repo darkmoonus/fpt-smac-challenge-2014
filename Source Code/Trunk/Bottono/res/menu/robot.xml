@@ -1,0 +1,42 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_scan_robot"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+     <item
+        android:id="@+id/menu_rollup"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Start rollup"/>
+     <item
+        android:id="@+id/menu_exam"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Start exam"/>
+    <item
+        android:id="@+id/menu_stand_up"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Stand up"/>
+    
+    <item
+        android:id="@+id/menu_crouch_robot"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Crouch"/>
+    
+    <item
+        android:id="@+id/menu_sitdown_robot"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Sitdown"/>
+    
+    <item
+        android:id="@+id/menu_sensor_head_middle"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Middle head"/>
+
+</menu>

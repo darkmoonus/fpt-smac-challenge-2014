@@ -1,0 +1,71 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: fptshop.aiml -->
+<!-- Author:  Mr Binh -->
+<!-- Last modified: March 20, 2014 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.4 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright © 2014 by  fpt. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.fpt.com.vn -->
+<category><pattern># FPT SHOP LÀ #</pattern>
+<template>FPT Shop là Hệ thống cửa hàng phân phối các sản phẩm chính hãng gồm: máy tính , điện thoại , Apple và phụ kiên thuộc Công ty Cổ phần lẻ kỹ thuật số FPT của tập đoàn FPT.</template>
+</category>
+<category><pattern># THÁI HÀ # BAO NHIÊU CỬA HÀNG #</pattern>
+<template>có 2, gồm: 45 Thái Hà và 216 Thái Hà</template>
+</category>
+<category><pattern># BAO NHIÊU CỬA HÀNG #</pattern>
+<template>Hiện nay , trên toàn quốc tổng số cửa hàng FPT Shop đạt 90 cửa hàng</template>
+</category>
+<category><pattern># PHƯƠNG CHÂM #</pattern>
+<template>Với phương châm “Trân trọng từng giây phút phục vụ quý khách hàng” , FPT Shop cam kết mang đến Quý khách hàng những sản phẩm chính hãng , bảo hành tốt , giá cả cạnh tranh và dịch vụ hoàn hảo nhất!</template>
+</category>
+<category><pattern># FRETAIL RA ĐỜI NGÀY THÁNG NĂM NÀO #</pattern>
+<template>Tháng 8 năm 2007</template>
+</category>
+<category><pattern># F RETAIL RA ĐỜI NGÀY THÁNG NĂM NÀO #</pattern>
+<template>Tháng 8 năm 2007</template>
+</category>
+<category><pattern># RA ĐỜI NGÀY THÁNG NĂM NÀO #</pattern>
+<template>Tháng 8 năm 2007</template>
+</category>
+<category><pattern># SẢN PHẨM KINH DOANH CỦA FPT SHOP #</pattern>
+<template>điện thoại, máy tính, apple, phụ kiện</template>
+</category>
+<category><pattern># NẾU # MUA MÁY TÍNH # KHÔNG ĐỦ TIỀN #</pattern>
+<template>Đã có dịch vụ trả góp tại FRT, lãi suất ưu đãi, thủ tục nhanh gọn</template>
+</category>
+<category><pattern># FPT SHOP MUA MÁY CŨ KHÔNG #</pattern>
+<template>FPT shop có cả mua và bán máy cũ, giá cả hỗ trợ rất tốt.</template>
+</category>
+<category><pattern># FPT SHOP CÓ MUA MÁY CŨ KHÔNG #</pattern>
+<template>FPT shop có cả mua và bán máy cũ, giá cả hỗ trợ rất tốt.</template>
+</category>
+<category><pattern># BẠN ĐANG ĐỨNG # FPT SHOP NÀO #</pattern>
+<template>FPT shop 45 Thái Hà</template>
+</category>
+<category><pattern># SỐ CỬA HÀNG FPT SHOP # HÀ NỘI #</pattern>
+<template>12 cửa hàng</template>
+</category>
+<category><pattern># CỬA HÀNG FPT SHOP # HÀ NỘI #</pattern>
+<template>12 cửa hàng</template>
+</category>
+<category><pattern># MUA PHỤ KIỆN TẠI FPT SHOP # ƯU ĐÃI * KHÔNG #</pattern>
+<template>Hiện tại, mua phụ kiện tại FPT shop khách hàng tự do đổi trả sản phẩm 1 đổi 1 trong vòng 1 năm</template>
+</category>
+<category><pattern># MUA PHỤ KIỆN TẠI FPT SHOP # LỢI * KHÔNG #</pattern>
+<template>Hiện tại, mua phụ kiện tại FPT shop khách hàng tự do đổi trả sản phẩm 1 đổi 1 trong vòng 1 năm</template>
+</category>
+<category><pattern># MUA PHỤ KIỆN TẠI FPT SHOP *</pattern>
+<template>Hiện tại, mua phụ kiện tại FPT shop khách hàng tự do đổi trả sản phẩm 1 đổi 1 trong vòng 1 năm</template>
+</category>
+</aiml>
+
+    

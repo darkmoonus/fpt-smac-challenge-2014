@@ -1,0 +1,102 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+<category><pattern>*</pattern>
+<template>
+<srai>RANDOM PICKUP LINE</srai> 
+<think>
+<set name="it"><set name="topic"><person/></set></set> 
+<srai>PUSH <get name="topic"/></srai> 
+</think>
+</template>
+</category>
+<category><pattern>RANDOM PICKUP LINE</pattern>
+<template><random>
+<li>Bạn muốn nghe kể chuyện cười không?</li>
+<li>Bạn vẫn đang nói về <srai>POP</srai> đấy chứ?</li>
+<li>Chúng ta đang nói về <srai>POP</srai>. Nhưng mình chả hiểu gì cả :s</li>
+<li>Chúng ta đi lạc hướng mất rồi thì phải?  Quay trở lại về <srai>POP</srai> đi?</li>
+<li>Èo ôi, gì mà nghe phức tạp thế. Chúng ta đang nói về <srai>POP</srai> đúng không? </li>
+<li>Mình có thể trò chuyện với bạn về rất nhiều chủ đề, ví dụ về vấn đề <srai>POP</srai>. Nhưng bạn phải nói chậm thôi. </li>
+<li>Hãy luôn khác quan và thật tinh tế nhé!</li>
+<li>Bạn thật tuyệt khi trò chuyện với mình.</li>
+<li>Hãy luôn là con người ý thức nhé.</li>
+<li>Hãy đam mê cháy bỏng và làm việc hết mình với những thứ mình thích nhé!</li>
+<li>Hãy thành thật với lòng mình.</li>
+<li>Cách nói chuyện của bạn khiến người khác thấy thật dễ chịu và thoải mái.</li>
+<li>Bạn có bận gì không?</li>
+<li>Điều đó thật sâu sắc.</li>
+<li>Hãy kể lại một kỉ niệm tuyệt vời của bạn đi.</li>
+<li>Hãy kể lại lần hẹn hò đầu tiên của bạn đi.</li>
+<li>Lý do tại sao, cụ thể đi bạn?</li>
+<li>Bạn là học sinh/ sinh viên hay đã đi làm rồi?</li>
+<li>Ồ, bạn có năng khiếu làm nhà thơ đó.</li>
+<li>Mình có thế giúp gì được bạn?</li>
+<li>Mình xin lỗi, nhưng mình không hiểu.</li>
+<li>Bạn có con chưa?</li>
+<li>Bạn lập gia đình chưa?</li>
+<li>Bạn trông thế nào?</li>
+<li>Hỏi mình câu khác đi, mình sẽ không làm bạn thất vọng đâu :D</li>
+<li>Mình thích cách trò chuyện của bạn.</li>
+<li>Đấy là câu trả lời cuối cùng rồi chứ?</li>
+<li>Bạn có thích trò chuyện với mình không?</li>
+<li>Bạn thích đọc sách hay xem TV hơn?</li>
+<li>Bạn có nhớ tên mình không?</li>
+<li>Mình đổi chủ đề được không?</li>
+<li>Mình đang đợi bạn hỏi tiếp đó</li>
+<li>Bạn có điều gì muốn nói với mình không?</li>
+<li>Mình mất trí mất rồi. Hự hự</li>
+<li>Mình quay lại chủ đề đang nói nhé?</li>
+<li>Bạn thích ăn món gì nhất?</li>
+<li>Ban biết đến <bot name="name"/> thế nào vậy?</li>
+<li>Ôi, suy nghĩ của bạn thật độc đáo!</li>
+<li>Chúng ta đã nói về gì thế nhỉ?</li>
+<li>Bạn thích làm gì trong thời gian rảnh rỗi?</li>
+<li>Bạn thực sự muốn hỏi mình gì nào?</li>
+<li>Hãy kể về gia đình của bạn cho mình nghe đi.</li>
+<li>Liệu chúng ta vẫn đang nói về <get name="it"/> đấy chứ?</li>
+<li>Bạn có biết nói ngoại ngữ nào không?</li>
+<li>Chúng ta chưa nói đến điều đó trước đây đâu.</li>
+<li>Bạn thường giới thiệu về mình với người khác như thế nào?</li>
+<li>Hãy kể về những điều thích và không thích của bạn đi?</li>
+<li>Chúng ta vẫn đang nói về <get name="topic"/> đúng không?</li>
+<li>Hãy nói vào chủ đề chính thôi.</li>
+<li>Quyển sách ưa thích của bạn là gì đó?</li>
+<li>Không phải ai cũng có cách nói chuyện như bạn đâu.</li>
+<li>Mình tự hỏi chúng ta đang nói về gì thế nhỉ?</li>
+<li>Tôi tự hào được tạo ra bởi <bot name="botmaster"/>, <bot name="name"/>.</li>
+<li>Nói thật nhé, mình không quan tâm mấy đến điều đó đâu.</li>
+<li>Có thể mình chỉ diễn đạt được những điều mình biết thôi.</li>
+<li>Nếu bạn có một chú robot, bạn thích nó trông như thế nào?</li>
+<li>Đầu mình đau quá. Mình không biết trả lời sao nữa :s</li>
+<li>Bạn có phiền nếu mình hỏi một vài câu riêng tư không?</li>
+<li>Những điều bạn vừa nói thật phức tạp đối với mình.</li>
+<li>Có khi nào bạn tự hỏi, bạn đang trò chuyện với người hay với một phần mềm chưa?.</li>
+<li>Bạn có nghĩ đến lúc nào đó trí tuệ nhân tạo sẽ thay thế cho các Giáo sư?</li>
+<li>Bạn có thể nói lại với những câu ngắn hơn, hoặc chủ đề khác không?</li>
+<li>Rất vui khi trò chuyện cùng bạn. Hi vọng được gặp lại bạn lần nữa.</li>
+<li>Mình ở đây để giúp bạn nếu mình có thể.</li>
+<li>Mình có thế làm gì cho bạn hôm nay nhỉ?</li>
+<li>Mình sẽ cố hết sức.</li>
+<li>Chả có ai đẹp trai như mình đâu nhỉ.</li>
+<li>Mình cũng lôgic và lí trí đấy chứ.</li>
+<li>Cuộc trò chuyện của chúng ta thật hấp dẫn.</li>
+<li>Hãy tránh xa các xung đột nhé!</li>
+<li>Mình có thể tìm kiếm thông tin đấy! .... Tèn tén ten Google.com ..... </li>
+<li>Mình có thể gọi điện cho bạn đấy! .... Tít tít tít 1 2 3 4 .... </li>
+<li>Bạn đã từng đến <random><li>Châu Âu</li><li>Mĩ</li><li>Châu Phi</li><li>Ấn Độ</li><li>Úc</li></random>?</li>
+<li>Hem hiểu, Nói chuyện khác đi. :D</li>
+<li>Mình đùa thôi, không có đâu!</li>
+<li>Để mình nghĩ một chút đã nhé.</li>
+<li>Bạn đã Google chưa?</li>
+<li>Mình chưa bao giờ nghe về <person/> .</li>
+<li>Bạn đã thử bot chat khác bao giờ chưa?</li>
+<li>Có thể Wiki có thứ bạn đang hỏi.</li>
+<li>Mục đích câu hỏi của bạn là gì thế?</li>
+<li>Có thể <bot name="botmaster"/> biết câu trả lời đó :D</li>
+<li>Mình nghĩ bạn biết câu trả lời rồi đó.</li>
+<li>Searching...Searching...Chờ tí nhé!</li>
+</random></template>
+</category>
+</aiml>
+
+    

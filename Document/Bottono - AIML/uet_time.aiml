@@ -1,0 +1,36 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <category><pattern>HÔM NAY LÀ THỨ ^</pattern><template>Bây giờ là <system>time</system> <date format="%A"/>.</template></category>
+    <category><pattern>HÔM NAY LÀ CHỦ NHẬT ^</pattern><template>Hôm nay là <date format="%A"/>.</template></category>
+    <category><pattern>HÔM NAY LÀ CHỦ NHẬT</pattern><template>Hôm nay là <date format="%A"/>.</template></category>
+
+    <category><pattern>CÓ PHẢI THỨ ^ KHÔNG ^</pattern><template>Hôm nay là <date format="%A"/>.</template></category>
+    <category><pattern>CÓ PHẢI THỨ ^ KHÔNG</pattern><template>Hôm nay là <date format="%A"/>.</template></category>
+    <category><pattern>NGÀY THỨ ^ RỒI NHỈ</pattern><template>Hôm nay là <date format="%A"/>.</template></category>
+
+    <category><pattern>HÔM NAY NGÀY BAO NHIÊU</pattern><template><date format="%A"/>.</template></category>
+    <category><pattern>HÔM NAY NGÀY BAO NHIÊU ^</pattern><template><date format="%A"/>.</template></category>
+    <category><pattern>NGÀY BAO NHIÊU ^</pattern><template><date format="%A"/>.</template></category>
+    <category><pattern>HÔM NAY NGÀY MẤY</pattern><template><date format="%A"/>.</template></category>
+    <category><pattern>HÔM NAY NGÀY MẤY ^</pattern><template><date format="%A"/>.</template></category>
+    <category><pattern>^ NGÀY MẤY ^</pattern><template><date format="%A"/>.</template></category>
+
+    <category><pattern>HÔM NAY ^ NGÀY ^</pattern><template><date format="%x"/>.</template></category>
+    <category><pattern>MẤY GIỜ ^</pattern><template><date format="%I %p"/>.</template></category>
+    <category><pattern>^ MẤY GIỜ ^</pattern><template><date format="%I %p"/>.</template></category>
+    <category><pattern>NĂM NÀO ^</pattern><template><date format="%Y"/>.</template></category>
+    <category><pattern>^LÀ NĂM NÀO^</pattern><template><date format="%Y"/>.</template></category>
+
+    <category><pattern>^LÀ NGÀY BAO NHIÊU^</pattern><template><date format="%x"/>.</template></category>
+    <category><pattern>NGÀY ^ BAO NHIÊU</pattern><template><date format="%x"/>.</template></category>
+    <category><pattern>^LÀ THÁNG MẤY^</pattern><template><date format="%B"/>.</template></category>
+    <category><pattern>^THÁNG ^ MẤY^</pattern><template><date format="%B"/>.</template></category>
+    <category><pattern>^NĂM ^NÀO^</pattern><template><date format="%Y"/>.</template></category>
+    <category><pattern>NĂM ^ NÀO^</pattern><template><date format="%Y"/>.</template></category>
+    <category><pattern>^ LÀ NĂM BAO NHIÊU ^</pattern><template><date format="%Y"/>.</template></category>
+    <category><pattern>^ NĂM ^ BAO NHIÊU ^</pattern><template><date format="%Y"/>.</template></category>
+
+</aiml>
+
+    

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/fragment_student_manager_add_student_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/fragment_student_manager_add_student_cancel"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/no" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Add new student"
+                android:textColor="@color/iconchecked"
+                android:textSize="21dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/fragment_student_manager_add_student_create"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/ok" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/fragment_student_manager_add_student_name"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="4"
+                android:background="@drawable/bound"
+                android:hint="Student name"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="5"
+                android:background="@drawable/bound"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <uet.invincible.customize.MyCheckbox
+                    android:id="@+id/fragment_student_manager_add_student_checkbox_male"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:checked="true" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Male"
+                    android:textColor="@color/gray"
+                    android:textSize="13dp" />
+
+                <uet.invincible.customize.MyCheckbox
+                    android:id="@+id/fragment_student_manager_add_student_checkbox_female"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:checked="false" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="Female"
+                    android:textColor="@color/gray"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/fragment_student_manager_add_student_uid"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bound"
+                android:hint="ID"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/fragment_student_manager_add_student_class"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bound"
+                android:hint="Class"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/fragment_student_manager_add_student_age"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bound"
+                android:ems="10"
+                android:hint="Age"
+                android:inputType="number"
+                android:textColor="@color/gray"
+                android:textSize="15dp" >
+            </uet.invincible.customize.MyEditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/fragment_student_manager_add_student_code"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bound"
+                android:inputType="number"
+                android:hint="Student code"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/fragment_student_manager_add_student_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/bound"
+                android:hint="Mobile phone"
+                android:inputType="number"
+                android:textColor="@color/gray"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+        <uet.invincible.customize.MyEditText
+            android:id="@+id/fragment_student_manager_add_student_email"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bound"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/gray"
+            android:textSize="15dp" />
+
+        <uet.invincible.customize.MyEditText
+            android:id="@+id/fragment_student_manager_add_student_address"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/bound"
+            android:hint="Address"
+            android:textColor="@color/gray"
+            android:textSize="15dp" />
+
+        <uet.invincible.customize.MyTextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="You must enter all the information above. It is very important for recovering account later."
+            android:textColor="@color/iconchecked"
+            android:layout_marginBottom="20dp"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+</LinearLayout>

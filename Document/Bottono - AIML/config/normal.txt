@@ -1,0 +1,23 @@
+    	".com"," dot com "
+".org"," dot org "
+".edu"," dot edu "	
+".gov"," dot gov 	
+".uk"," dot uk " 	
+".net"," dot net " 	
+".ca"," dot ca "	
+".de"," dot de "
+".jp"," dot jp "
+".fr"," dot fr " 
+".au"," dot au "
+".us"," dot us "
+".ru"," dot ru "
+".ch"," dot ch "
+".it"," dot it "
+".nl"," dot nl "
+".se"," dot se "
+".no"," dot no "
+".es"," dot es "
+".mil"," dot mil "
+".co"," dot co "
+
+    

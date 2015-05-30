@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/item_student_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/student_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/item_row_student_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/avatar_0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/item_row_student_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nguyễn Văn Giáp"
+                    android:textColor="@color/iconchecked"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/item_row_student_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:lines="1"
+                    android:text="Mã sinh viên: 12020010, K57CLC Mã sinh viên: 12020010, K57CLC"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <uet.invincible.customize.MyTextView
+            android:id="@+id/item_student_list_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+
+        <LinearLayout
+            android:id="@+id/item_row_student_list_hidden_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/item_row_student_list_email"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bound"
+                android:hint="Email"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/item_row_student_list_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bound"
+                android:hint="Mobile"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/item_row_student_list_address"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/bound"
+                android:hint="Address"
+                android:textColor="@color/gray"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/item_row_student_list_update_chuyencan"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bound"
+                    android:gravity="center"
+                    android:hint="CC"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/item_row_student_list_update_giuaki"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bound"
+                    android:gravity="center"
+                    android:hint="BT"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/item_row_student_list_send_cuoiki"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bound"
+                    android:gravity="center"
+                    android:hint="GK"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/item_row_student_list_tongket"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bound"
+                    android:gravity="center"
+                    android:hint="CK"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/item_row_student_list_update_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:text="Update"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/item_row_Student_list_send_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:text="Email"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/item_row_student_list_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray"
+                    android:gravity="center"
+                    android:text="Delete"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <uet.invincible.customize.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/gray_light" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

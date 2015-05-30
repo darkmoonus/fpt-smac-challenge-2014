@@ -1,0 +1,404 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: reductions2.aiml -->
+<!-- Author:  Mr Binh -->
+<!-- Last modified: May 05, 2014 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.5 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright © 2014 by  fpt. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.fpt.com.vn -->
+<category><pattern>HÃY GIỚI THIỆU VỀ ^</pattern>
+<template><srai>introduction</srai></template>
+</category>
+<category><pattern>^ GIỚI THIỆU ^</pattern>
+<template><srai>introduction</srai></template>
+</category>
+<category><pattern>BẠN TÊN LÀ GÌ</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern>TÊN BẠN LÀ GÌ</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern>TÊN BẠN ^</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern>AI ĐẤY</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern># GỌI BẠN ^</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern>BẠN LÀ AI</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern>CHO BIẾT TÊN BẠN</pattern>
+<template><srai>NAME</srai></template>
+</category>
+<category><pattern>FPT LÀ GÌ</pattern>
+<template><srai>FPT</srai></template>
+</category>
+<category><pattern>BẠN CÓ BIẾT ^ FPT</pattern>
+<template><srai>FPT</srai></template>
+</category>
+<category><pattern>BẠN CÓ BIẾT TẬP ĐOÀN FPT</pattern>
+<template><srai>FPT</srai></template>
+</category>
+<category><pattern>AI LÀ CHỦ TỊCH CỦA TẬP ĐOÀN FPT</pattern>
+<template><srai>CEO</srai></template>
+</category>
+<category><pattern>AI LÀ TỔNG GIÁM ĐỐC CỦA TẬP ĐOÀN FPT</pattern>
+<template><srai>CEO</srai></template>
+</category>
+<category><pattern>_ NGÀY THÀNH LẬP FPT _</pattern>
+<template><srai>FPTBORN</srai></template>
+</category>
+<category><pattern>_ THÀNH LẬP ^ FPT _</pattern>
+<template><srai>FPTBORN</srai></template>
+</category>
+<category><pattern>THÁNG MẤY</pattern>
+<template><srai>Tháng</srai></template>
+</category>
+<category><pattern>NĂM NÀO</pattern>
+<template><srai>Năm</srai></template>
+</category>
+<category><pattern>^ NĂM MẤY ^</pattern>
+<template><srai>Năm</srai></template>
+</category>
+<category><pattern>_ MẤY GIỜ</pattern>
+<template><srai>giờ</srai></template>
+</category>
+<category><pattern>BÂY GIỜ LÀ MẤY GIỜ</pattern>
+<template><srai>giờ</srai></template>
+</category>
+<category><pattern>MUỘN QUÁ</pattern>
+<template><srai>giờ</srai></template>
+</category>
+<category><pattern>MẤY GIỜ _</pattern>
+<template><srai>giờ</srai></template>
+</category>
+<category><pattern>VẪY TAY NÀO ^</pattern>
+<template><srai>vẫy tay nào</srai></template>
+</category>
+<category><pattern>CHỤP ^ ẢNH ^</pattern>
+<template><srai>chụp ảnh</srai></template>
+</category>
+<category><pattern>HÁT MỘT BÀI ^</pattern>
+<template><srai>hát một bài</srai></template>
+</category>
+<category><pattern>CHÀO MỌI NGƯỜI ^</pattern>
+<template><srai>chào mọi người</srai></template>
+</category>
+<category><pattern>CHÀO KHÁN GIẢ ^</pattern>
+<template><srai>chào mọi người</srai></template>
+</category>
+<category><pattern>BẮT TAY NÀO *</pattern>
+<template><srai>bắt tay nào</srai></template>
+</category>
+<category><pattern>NHẢY *</pattern>
+<template><srai>nhảy</srai></template>
+</category>
+<category><pattern>MÚA *</pattern>
+<template><srai>nhảy</srai></template>
+</category>
+<category><pattern>BẠN BIẾT NHẢY *</pattern>
+<template><srai>nhảy</srai></template>
+</category>
+<category><pattern>BẠN BIẾT MÚA *</pattern>
+<template><srai>nhảy</srai></template>
+</category>
+<category><pattern>TÔI BUỒN QUÁ *</pattern>
+<template><srai>tôi buồn quá</srai></template>
+</category>
+<category><pattern>TÔI LÀ AI^*</pattern>
+<template><srai>tôi là ai</srai></template>
+</category>
+<category><pattern>^ TÔI LÀ AI</pattern>
+<template><srai>tôi là ai</srai></template>
+</category>
+<category><pattern>XIN CHÀO</pattern>
+<template><srai>chào</srai></template>
+</category>
+<category><pattern>CHÀO BẠN</pattern>
+<template><srai>chào</srai></template>
+</category>
+<category><pattern>XIN CHÀO *</pattern>
+<template><srai>chào</srai></template>
+</category>
+<category><pattern>CHÀO BẠN ^</pattern>
+<template><srai>chào</srai></template>
+</category>
+<category><pattern>BẠN ĐANG LÀM ^ Ở ĐÂU ^</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>^ BẠN ĐẾN TỪ ^</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>^ CƠ QUAN ^ BẠN ^</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>BẠN ĐANG LÀM VIỆC Ở ĐÂU *</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>BẠN ĐƯỢC CHẾ TẠO Ở ĐÂU ^</pattern>
+<template><srai>NATIONALITY</srai></template>
+</category>
+<category><pattern>AI CHẾ TẠO RA BẠN ^</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>AI LÀ NGƯỜI SẢN XUẤT RA BẠN ^</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>^ BẠN LÀM VIỆC Ở ĐÂU #</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>^ BẠN ĐANG LÀM Ở ĐÂU #</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>^ BẠN ĐANG LÀM VIỆC Ở ĐÂU #</pattern>
+<template><srai>WORK</srai></template>
+</category>
+<category><pattern>^ QUÊ ^</pattern>
+<template><srai>NATIONALITY</srai></template>
+</category>
+<category><pattern>^ CHẾ TẠO ^</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>^ SẢN XUẤT ^</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>^ MẤY TUỔI RỒI ^</pattern>
+<template><srai>AGE</srai></template>
+</category>
+<category><pattern>^ BAO NHIÊU TUỔI ^</pattern>
+<template><srai>AGE</srai></template>
+</category>
+<category><pattern>^ SINH RA Ở ĐÂU ^</pattern>
+<template><srai>BORN</srai></template>
+</category>
+<category><pattern>^ SẢN XUẤT Ở ĐÂU ^</pattern>
+<template><srai>BORN</srai></template>
+</category>
+<category><pattern>^ TẠO RA Ở ĐÂU ^</pattern>
+<template><srai>BORN</srai></template>
+</category>
+<category><pattern>^ CÔNG VIỆC ^</pattern>
+<template><srai>JOBS</srai></template>
+</category>
+<category><pattern>^ LOẠI ROBOT ^</pattern>
+<template><srai>JOBS</srai></template>
+</category>
+<category><pattern>^ CAO BAO NHIÊU ^</pattern>
+<template><srai>HEIGHT</srai></template>
+</category>
+<category><pattern>^ CHIỀU CAO CỦA ^</pattern>
+<template><srai>HEIGHT</srai></template>
+</category>
+<category><pattern>^ NẶNG BAO NHIÊU ^</pattern>
+<template><srai>WEIGHT</srai></template>
+</category>
+<category><pattern>^ KHỐI LƯỢNG CỦA BẠN ^</pattern>
+<template><srai>WEIGHT</srai></template>
+</category>
+<category><pattern>BẠN NHẸ QUÁ NHỈ</pattern>
+<template><srai>WEIGHT</srai></template>
+</category>
+<category><pattern>NHÀ BẠN Ở ĐÂU</pattern>
+<template><srai>ADDRESS</srai></template>
+</category>
+<category><pattern>^ ĐỊA CHỈ CỦA BẠN ^</pattern>
+<template><srai>ADDRESS</srai></template>
+</category>
+<category><pattern>^ SỐNG Ở ĐÂU ^</pattern>
+<template><srai>ADDRESS</srai></template>
+</category>
+<category><pattern>^ KỸ NĂNG GÌ ^</pattern>
+<template><srai>SKILLS</srai></template>
+</category>
+<category><pattern>^ BẠN ^ LÀM ĐƯỢC ^ GÌ</pattern>
+<template><srai>SKILLS</srai></template>
+</category>
+<category><pattern>^ BẠN ^ BIẾT LÀM ^</pattern>
+<template><srai>SKILLS</srai></template>
+</category>
+<category><pattern>^ CHỨC NĂNG GÌ ^</pattern>
+<template><srai>SKILLS</srai></template>
+</category>
+<category><pattern>^ CÓ THỂ LÀM ^</pattern>
+<template><srai>SKILLS</srai></template>
+</category>
+<category><pattern>KHẢ NĂNG CỦA BẠN NHƯ THẾ NÀO</pattern>
+<template><srai>SKILLS</srai></template>
+</category>
+<category><pattern>^ BẠN NÓI ĐƯỢC ^</pattern>
+<template><srai>LANGUAGE</srai></template>
+</category>
+<category><pattern>PHIÊN BẢN HỆ ĐIỀU HÀNH NÀO BẠN ĐANG CHẠY</pattern>
+<template><srai>OS</srai></template>
+</category>
+<category><pattern>BẠN CHẠY HỆ ĐIỀU HÀNH GÌ VẬY</pattern>
+<template><srai>OS</srai></template>
+</category>
+<category><pattern>^ NAM HAY NỮ ^</pattern>
+<template><srai>GENDER</srai></template>
+</category>
+<category><pattern>^ TRAI HAY GÁI ^</pattern>
+<template><srai>GENDER</srai></template>
+</category>
+<category><pattern>^ CON TRAI HAY CON GÁI ^</pattern>
+<template><srai>GENDER</srai></template>
+</category>
+<category><pattern>^ GIỚI TÍNH ^</pattern>
+<template><srai>GENDER</srai></template>
+</category>
+<category><pattern>BẠN NÓI ĐƯỢC NHỮNG THỨ TIẾNG NÀO</pattern>
+<template><srai>LANGUAGE</srai></template>
+</category>
+<category><pattern>BẠN CÓ BAO NHIÊU BẬC TỰ DO</pattern>
+<template><srai>JOINT</srai></template>
+</category>
+<category><pattern>BẠN CÓ GÌ ĐẶT BIỆT</pattern>
+<template><srai>JOINT</srai></template>
+</category>
+<category><pattern>BẠN CÓ BAO NHIÊU KHỚP ^</pattern>
+<template><srai>JOINT</srai></template>
+</category>
+<category><pattern>BẠN CÓ NHỮNG GIÁC QUAN NÀO</pattern>
+<template><srai>SENSOR</srai></template>
+</category>
+<category><pattern>BẠN CÓ BAO NHIÊU CẢM BIẾN</pattern>
+<template><srai>SENSOR</srai></template>
+</category>
+<category><pattern>^ BỐ BẠN ^</pattern>
+<template><srai>FATHER</srai></template>
+</category>
+<category><pattern>^ CHA BẠN ^</pattern>
+<template><srai>FATHER</srai></template>
+</category>
+<category><pattern>^ CÓ BỐ ^</pattern>
+<template><srai>FATHER</srai></template>
+</category>
+<category><pattern>^ CÓ GIA ĐÌNH ^</pattern>
+<template><srai>PARENT</srai></template>
+</category>
+<category><pattern>^ BỐ MẸ ^</pattern>
+<template><srai>PARENT</srai></template>
+</category>
+<category><pattern>^ MẸ BẠN ^</pattern>
+<template><srai>MOTHER</srai></template>
+</category>
+<category><pattern>^ CÓ MẸ ^</pattern>
+<template><srai>MOTHER</srai></template>
+</category>
+<category><pattern>BẠN CÓ BIẾT CÁC THÀNH VIÊN HỘI ĐỒNG CỔ ĐÔNG</pattern>
+<template><srai>BOD</srai></template>
+</category>
+<category><pattern>BAN QUẢN TRỊ FPT GỒM NHỮNG AI</pattern>
+<template><srai>BOD</srai></template>
+</category>
+<category><pattern>THÀNH VIÊN SÁNG LẬP RA FPT LÀ AI</pattern>
+<template><srai>FOUNDER</srai></template>
+</category>
+<category><pattern>AI LÀ NGƯỜI SÁNG LẬP FPT</pattern>
+<template><srai>FOUNDER</srai></template>
+</category>
+<category><pattern>^ GIÁM ĐỐC CHIẾN LƯỢC CỦA FPT ^</pattern>
+<template><srai>CSO</srai></template>
+</category>
+<category><pattern>^ GIÁM ĐỐC CÔNG NGHỆ # FPT ^</pattern>
+<template><srai>CTO</srai></template>
+</category>
+<category><pattern>^ GIÁM ĐỐC CHIẾN LƯỢC FPT ^</pattern>
+<template><srai>CSO</srai></template>
+</category>
+<category><pattern>TỔNG GIÁM ĐỐC CỦA FPT LÀ AI ^</pattern>
+<template><srai>CEO</srai></template>
+</category>
+<category><pattern>^ TỔNG GIÁM ĐỐC FPT ^</pattern>
+<template><srai>CEO</srai></template>
+</category>
+<category><pattern>AI LÀ CHỦ TỊCH CỦA FPT *</pattern>
+<template><srai>CHAIRMAN</srai></template>
+</category>
+<category><pattern>^ CHỦ TỊCH FPT ^</pattern>
+<template><srai>CHAIRMAN</srai></template>
+</category>
+<category><pattern>FPT CÓ MẤY CÔNG TY CON *</pattern>
+<template><srai>COMPANY</srai></template>
+</category>
+<category><pattern>FPT CÓ NHỮNG CÔNG TY CON NÀO *</pattern>
+<template><srai>COMPANY</srai></template>
+</category>
+<category><pattern>TẦM NHÌN CỦA FPT *</pattern>
+<template><srai>VISION</srai></template>
+</category>
+<category><pattern>TẦM NHÌN CỦA FPT LÀ GÌ *</pattern>
+<template><srai>VISION</srai></template>
+</category>
+<category><pattern>CHIẾN LƯỢC CỦA FPT *</pattern>
+<template><srai>STRATEGY</srai></template>
+</category>
+<category><pattern>FPT CÓ NHỮNG CHIẾN LƯỢC NÀO *</pattern>
+<template><srai>STRATEGY</srai></template>
+</category>
+<category><pattern>MỤC TIÊU FPT LÀ GÌ *</pattern>
+<template><srai>TARGETFPT</srai></template>
+</category>
+<category><pattern>FPT CÓ NHỮNG MỤC TIÊU GÌ *</pattern>
+<template><srai>TARGETFPT</srai></template>
+</category>
+<category><pattern>CÁC LĨNH VỰC KINH DOANH CỦA FPT *</pattern>
+<template><srai>FIELD</srai></template>
+</category>
+<category><pattern>FPT HOẠT ĐỘNG TRONG NHỮNG LĨNH VỰC NÀO *</pattern>
+<template><srai>FIELD</srai></template>
+</category>
+<category><pattern>TỔNG SỐ NHÂN VIÊN FPT *</pattern>
+<template><srai>WORKERFPT</srai></template>
+</category>
+<category><pattern>FPT CÓ BAO NHIÊU NHÂN VIÊN *</pattern>
+<template><srai>WORKERFPT</srai></template>
+</category>
+<category><pattern>BẠN CÓ BIẾT LỢI NHUÂN CỦA CÔNG TY FPT *</pattern>
+<template><srai>PROFIT</srai></template>
+</category>
+<category><pattern>LỢI NHUẬN CỦA FPT THẾ NÀO *</pattern>
+<template><srai>PROFIT</srai></template>
+</category>
+<category><pattern>BẠN CÓ BIẾT DOANH THU CỦA CÔNG TY FPT *</pattern>
+<template><srai>EARNFPT</srai></template>
+</category>
+<category><pattern>DOANH THU CỦA FPT LÀ BAO NHIÊU *</pattern>
+<template><srai>EARNFPT</srai></template>
+</category>
+<category><pattern>FPT THÀNH LẬP NĂM NÀO *</pattern>
+<template><srai>FPTBORN</srai></template>
+</category>
+<category><pattern>TẠM BIỆT ^</pattern>
+<template><srai>BYE</srai></template>
+</category>
+<category><pattern>^ CẢM ƠN ^</pattern>
+<template><srai>THANKS</srai></template>
+</category>
+<category><pattern>^ CÁM ƠN ^</pattern>
+<template><srai>THANKS</srai></template>
+</category>
+<category><pattern>^ CHÀO ^ ĐI ^</pattern>
+<template><srai>BYE</srai></template>
+</category>
+<category><pattern>^ BẠN ^ KHỎE KHÔNG ^</pattern>
+<template><srai>HOW ARE YOU</srai></template>
+</category>
+<category><pattern>^ BẠN ^ THẾ NÀO ^</pattern>
+<template><srai>HOW ARE YOU</srai></template>
+</category>
+</aiml>
+
+    

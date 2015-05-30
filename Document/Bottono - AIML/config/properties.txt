@@ -1,0 +1,10 @@
+url:http://uet.vnu.edu.vn
+name: Bốt tô nô
+email:invincible@uet.vnu.edu.vn
+gender: male
+botmaster: UET Invincible
+organization: UET Invincible
+version:0.0.5
+
+
+    

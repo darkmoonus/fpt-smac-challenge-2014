@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <uet.invincible.customize.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/gray_light" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/exam_dialog_avatar"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/avatar_0" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Name: "
+                        android:textColor="@color/iconchecked"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <uet.invincible.customize.MyTextView
+                        android:id="@+id/exam_dialog_student_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="Vũ Việt Anh"
+                        android:textColor="@color/gray"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Code: "
+                        android:textColor="@color/iconchecked"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <uet.invincible.customize.MyTextView
+                        android:id="@+id/exam_dialog_student_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="12020010"
+                        android:textColor="@color/gray"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Class: "
+                        android:textColor="@color/iconchecked"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <uet.invincible.customize.MyTextView
+                        android:id="@+id/exam_dialog_student_class"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="K57CLC"
+                        android:textColor="@color/gray"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <uet.invincible.customize.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@color/gray_light" />
+
+        <uet.invincible.customize.MyEditText
+            android:id="@+id/exam_dialog_answer"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bound"
+            android:gravity="top"
+            android:hint="Conversation"
+            android:padding="8dp"
+            android:textColor="@color/gray"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:id="@+id/dialog_exam_submit_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <uet.invincible.customize.MyTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="If you don&apos;t want to type the text, you can use voice to send me a request."
+                android:textColor="@color/gray"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/exam_dialog_voice"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="3dp"
+                android:background="@drawable/floating_voice"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

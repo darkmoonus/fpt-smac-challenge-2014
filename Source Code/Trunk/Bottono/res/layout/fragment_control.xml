@@ -1,0 +1,704 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- FACE DETECTION -->
+
+        <LinearLayout
+            android:id="@+id/controler_face_recognition_training_row"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/control_face_recognition"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Face recognition training"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Detection, recognition and training face"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controler_face_recognition_training_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controler_face_recognition_training_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp" >
+
+                <com.fpt.robot.vision.RobotCameraPreviewView
+                    android:id="@+id/controler_face_recognition_camara_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/controler_face_recognition_camara_preview_capture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/control_camera_preview" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/controler_face_recognition_camera_play"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/control_camera_play" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Namespace : "
+                    android:textColor="@color/gray"
+                    android:textSize="18dp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/controler_face_recognition_camera_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/controler_face_recognition_camera_userid"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bound"
+                    android:gravity="center_vertical"
+                    android:hint="User id"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp" />
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_face_recognition_camera_train"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/button_selector_gray"
+                    android:gravity="center"
+                    android:text="Train"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/controler_face_recognition_camera_userid_URLtrain"
+                    android:layout_width="75dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/bound"
+                    android:gravity="center_vertical"
+                    android:hint="User id"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp" />
+
+                <uet.invincible.customize.MyEditText
+                    android:id="@+id/controler_face_recognition_camera_urllink_URLtrain"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bound"
+                    android:gravity="center_vertical"
+                    android:hint="Image link"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp" />
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_face_recognition_camera_train_URLtrain"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/button_selector_gray"
+                    android:gravity="center"
+                    android:text="URL Train"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_face_recognition_camera_capture"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector_gray"
+                    android:gravity="center"
+                    android:text="Capture"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_face_recognition_camera_detect"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector_gray"
+                    android:gravity="center"
+                    android:text="Detect"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_face_recognition_camera_recognize"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector_gray"
+                    android:gravity="center"
+                    android:text="Recognize"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+
+    <!-- DATABASE -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/controler_database_row"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/control_database_backend"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Database manager"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Execute cypher query with Neo4J database"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controler_database_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controler_database_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <uet.invincible.customize.MyEditText
+                android:id="@+id/controler_database_query_text"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bound"
+                android:gravity="top"
+                android:hint="Type cypher here"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/gray"
+                android:textCursorDrawable="@null"
+                android:textSize="17dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_database_clear_button"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/gray_light"
+                    android:gravity="center"
+                    android:text="Clear all"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <uet.invincible.customize.MyTextView
+                    android:id="@+id/controler_database_query_button"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_selector_gray"
+                    android:gravity="center"
+                    android:text="Query now"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+
+    <!-- BEHAVIOR -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/controler_behavior_row"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/control_behavior"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Behavior manager"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Execute and manage NAO behavior"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controler_behavior_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controler_behavior_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <uet.invincible.customize.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray_light" />
+
+            <uet.invincible.libs.pulltorefresh.PullToRefreshListView
+                android:id="@+id/controler_behavior_content_listview"
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:divider="@null"
+                android:scrollbars="none" >
+            </uet.invincible.libs.pulltorefresh.PullToRefreshListView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+    <!-- GESTURE CONTROLER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/controler_gesture_row"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/control_gesture"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Gesture manager"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Execute and manage NAO gesture"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controler_gesture_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controler_gesture_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <uet.invincible.customize.MyTextView
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/gray_light" />
+
+            <uet.invincible.libs.pulltorefresh.PullToRefreshListView
+                android:id="@+id/controler_gesture_content_listview"
+                android:layout_width="match_parent"
+                android:layout_height="242dp"
+                android:divider="@null"
+                android:scrollbars="none" >
+            </uet.invincible.libs.pulltorefresh.PullToRefreshListView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+    <!-- FILE TRANSFER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/controler_file_transfer_row"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/control_transfer_file"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Files transfer"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Transfer files to private or tmp folder"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controler_file_transfer_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controler_file_transfer_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+
+    <!-- IR CONTROLER -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/controler_file_ir_row"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/selector"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/control_ir"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="Infrared remote"
+                    android:textColor="@color/gray"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <uet.invincible.customize.MyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Use IR to control some devices"
+                    android:textColor="@color/gray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/controler_file_ir_arrow"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/controler_file_ir_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/gray_light" />
+    </LinearLayout>
+
+</LinearLayout>

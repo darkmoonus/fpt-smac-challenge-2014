@@ -1,0 +1,140 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>CHÀO</pattern>
+        <template>
+            <random>
+                <li>Chào bạn. Mình có thế giúp gì bạn?</li>
+                <li>Helu. Lại là bạn đó hở?</li>
+                <li>Hi. Bạn khỏe chứ?</li>
+                <li>Gì vậy? Bạn gọi mình à? :D</li>
+                <li>Xin chào, mình là Bottono, rất hân hạnh được làm quen với bạn. </li>
+            </random>
+        </template>
+    </category>
+    <category><pattern>^ CHÀO ^</pattern><template><srai>CHÀO</srai></template></category>        
+    <category><pattern>HELLO ^</pattern><template><srai>CHÀO</srai></template></category>    
+    <category><pattern>HI ^</pattern><template><srai>CHÀO</srai></template></category>    
+    <category><pattern>HEY ^</pattern><template><srai>CHÀO</srai></template></category>
+    <category><pattern>^ ƠI</pattern><template><srai>CHÀO</srai></template></category>
+    <category><pattern>ALO ^</pattern><template><srai>CHÀO</srai></template></category>
+    
+    <category>
+        <pattern>BYE</pattern>
+        <template>            
+            <random>
+                <li>Chào nhé. Mình sẽ nhớ bạn lắm đó!</li>
+                <li>Pipi. Rất vui khi được trò chuyện cùng bạn.</li>
+                <li>Bye bye. Cuộc trò chuyện của ta tuyệt thật!</li>
+                <li>Đi nhé. Cẩn thận đường xá nhé!</li>
+                <li>Chat típ sau nhé. Mình cũng cần nghỉ ngơi chút xíu :></li>
+                <li>Khi khác nhé. Hôm nay cũng muộn rồi.</li>
+                <li>Uhm, pipi. Hy vọng bạn vui khi trò chuyện cùng mình :D</li>
+            </random>
+        </template>
+    </category>
+    <category><pattern>^ TẠM BIỆT ^</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>BYE ^</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>PIPI ^</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>PIPI</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>BYE BYE</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>BYE BYE ^</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>^ ĐI ĐÂY</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>LÚC KHÁC NHÉ</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>LÚC KHÁC CHAT</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>LÚC KHÁC ^ TIẾP</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>LÚC KHÁC ^ TIẾP</pattern><template><srai>BYE</srai></template></category>
+    <category><pattern>^ BYE VẬY ^</pattern><template><srai>BYE</srai></template></category>
+
+    <category>
+        <pattern>CHÚC</pattern>
+        <template>
+            <random>
+                <li>Same to you</li>
+                <li>Bạn cũng vậy nhé</li>
+                <li>Cám ơn</li>
+                <li>Hi Hi</li>
+            </random>
+        </template>
+    </category>
+    <category><pattern>^ CHÚC ^</pattern><template><srai>CHÚC</srai></template></category>
+    <category><pattern>CHÚC ^</pattern><template><srai>CHÚC</srai></template></category>
+
+    <category>
+        <pattern>CHỬI</pattern>
+        <template>
+            <random>
+                <li>Bạn cũng vậy</li>
+                <li>Ặc</li>
+                <li>Xin lỗi, mình chưa hoàn thiện mà</li>
+                <li>Hiz</li>
+            </random>
+        </template>
+    </category>
+    <category><pattern>NGU ^ </pattern><template><srai>CHỬI</srai></template></category>
+    <category><pattern>BẠN NGU</pattern><template><srai>CHỬI</srai></template></category>
+    <category><pattern>BẠN NGU ^</pattern><template><srai>CHỬI</srai></template></category>
+    <category><pattern>^ BẠN NGU ^</pattern><template><srai>CHỬI</srai></template></category>
+    <category><pattern>BẠN NGỐC</pattern><template><srai>CHỬI</srai></template></category>
+    <category><pattern>BẠN NGỐC ^</pattern><template><srai>CHỬI</srai></template></category>
+    <category><pattern>^ BẠN NGỐC ^</pattern><template><srai>CHỬI</srai></template></category>
+
+    <category>
+        <pattern>CẢM THÁN</pattern>
+        <template>
+            <random>
+                <li>Ồ. Thật tuyệt</li>
+                <li>Công nhận.</li>
+                <li>Hihi</li>
+                <li>Hehe</li>                
+            </random>
+        </template>
+    </category>
+    <category><pattern>Ừ ^ </pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>UH</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>^ KHỎE</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>OK ^</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẾ Á</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẾ À</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẾ HỞ</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẾ HẢ</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẬT À</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẬT Á</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẬT HỞ</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>THẬT HẢ</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>^ ĐỒNG Ý ^</pattern><template><srai>CẢM THÁN</srai></template></category>
+    <category><pattern>NHẤT TRÍ</pattern><template><srai>CẢM THÁN</srai></template></category>
+    
+    <category>
+        <pattern>CÁM ƠN</pattern>
+        <template>
+            <random>
+                <li>Ồ. Không có chi</li>
+                <li>You are wellcome!</li>
+                <li>Từ đó có mấy chữ phải nhỉ? :D</li>
+                <li>:D</li>                
+            </random>
+        </template>
+    </category>    
+    <category><pattern>^ CÁM ƠN ^</pattern><template><srai>CÁM ƠN</srai></template></category>
+    <category><pattern>^ CẢM ƠN ^</pattern><template><srai>CÁM ƠN</srai></template></category>
+
+
+    <category>
+        <pattern>KHỎE KHÔNG</pattern>
+        <template>
+            <random>
+                <li>Like a superman. Yeah!!!</li>
+                <li>Mình khỏe. Cám ơn nhé!</li>
+                <li>Chưa thấy bug nào cả, hehe :D </li>
+                <li>Khéo, tí nữa mình trả lời lung tung đó :3</li>                
+            </random>
+        </template>
+    </category>
+    <category><pattern>^ KHỎE KHÔNG</pattern><template><srai>KHỎE KHÔNG</srai></template></category>
+    <category><pattern>^ KHỎE CHỨ</pattern><template><srai>KHỎE KHÔNG</srai></template></category>
+    <category><pattern>^ SỨC KHỎE THẾ NÀO</pattern><template><srai>KHỎE KHÔNG</srai></template></category>
+
+</aiml>
+
+    

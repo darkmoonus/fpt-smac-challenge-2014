@@ -1,0 +1,234 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: vnclient.aiml -->
+<!-- Author:  Mr Binh -->
+<!-- Last modified: May 05, 2014 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.5 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright © 2014 by  fpt. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.fpt.com.vn -->
+<category><pattern>TÔI THÍCH MÀU *</pattern>
+<template>Màu bạn thích nghe thật lạ , tôi chưa biết về màu đó</template>
+</category>
+<category><pattern>TÔI THÍCH MÀU XANH LÁ CÂY</pattern>
+<template>Bạn cũng thích màu <set name="vnfavoritecolor">xanh lá cây</set> giống tôi à , thật thú vị <think><set name="it"><set name="topic">xanh lá cây</set></set></think></template>
+</category>
+<category><pattern>BẠN THÍCH MÀU GÌ</pattern>
+<template>Tôi thích màu xanh lá cây, còn bạn thì sao</template>
+</category>
+<category><pattern>BẠN THÍCH MÀU NÀO</pattern>
+<template><srai> Bạn thích màu gì </srai></template>
+</category>
+<category><pattern>BIẾT TÔI THÍCH MÀU GÌ</pattern>
+<template><condition name="vnfavoritecolor"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li><srai>confirm color</srai></li></condition></template>
+</category>
+<category><pattern>CONFIRM COLOR</pattern>
+<template>Bạn thích màu <get name="vnfavoritecolor"/> phải không</template>
+</category>
+<category><pattern>^ ĐÚNG ^</pattern><that>BẠN THÍCH MÀU * PHẢI KHÔNG</that>
+<template>Bạn vừa nói với tôi mà.</template>
+</category>
+<category><pattern>SETJOB</pattern>
+<template><think><set name="vnjob"><star/></set></think> Thì ra là vậy. Tôi sẽ ghi nhớ thông tin này</template>
+</category>
+<category><pattern>TÔI LÀM GÌ</pattern>
+<template><condition name="vnjob"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li><srai>confirm job</srai></li></condition></template>
+</category>
+<category><pattern>CONFIRM JOB</pattern>
+<template>Bạn là <get name = "vnjob"/></template>
+</category>
+<category><pattern>BIẾT TÔI LÀM VIỆC GÌ</pattern>
+<template><srai> tôi làm gì </srai></template>
+</category>
+<category><pattern>BIẾT TÔI LÀM NGHỀ GÌ</pattern>
+<template><srai> tôi làm gì </srai></template>
+</category>
+<category><pattern>TÔI LÀ *</pattern>
+<template>Xin chào <star/> , rất vui được gặp bạn. <think> <set name ="vnname" > <star/> </set></think></template>
+</category>
+<category><pattern>TÊN TÔI LÀ *</pattern>
+<template>Xin chào <star/> , rất vui được gặp bạn. <think> <set name ="vnname" > <star/> </set></think></template>
+</category>
+<category><pattern>BIẾT TÔI</pattern>
+<template><condition name="vnname"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li><srai>confirm name</srai></li></condition></template>
+</category>
+<category><pattern>CONFIRM NAME</pattern>
+<template>Bạn là <get name = "vnname"/></template>
+</category>
+<category><pattern>^ TÔI * TUỔI ^</pattern>
+<template>Bạn nhiều tuổi hơn tôi <think><set name="vnage"><star index ="2"/></set></think></template>
+</category>
+<category><pattern>BIẾT TUỔI CỦA TÔI</pattern>
+<template><condition name="vnage"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>Bạn <get name ="vnage" /> tuổi</li></condition></template>
+</category>
+<category><pattern>TÔI BAO NHIÊU TUỔI</pattern>
+<template><srai>biết tuổi của tôi</srai></template>
+</category>
+<category><pattern>TÔI CHƯA CÓ GIA ĐÌNH</pattern>
+<template><random>
+<li>Bạn nên sớm lập gia đình đi</li>
+<li>Bạn bao nhiêu tuổi rồi mà vẫn chưa lập gia đình</li>
+</random> <think><set name ="vnstatus"> độc thân </set></think></template>
+</category>
+<category><pattern>TÔI * TUỔI</pattern><that>BẠN BAO NHIÊU TUỔI RỒI MÀ VẪN CHƯA LẬP GIA ĐÌNH</that>
+<template>Bạn vẫn còn trẻ , đừng lo lắng. <think><set name="vnage"><star/></set></think></template>
+</category>
+<category><pattern>TÔI CHƯA LẤY CHỒNG</pattern>
+<template><srai>tôi chưa có gia đình</srai></template>
+</category>
+<category><pattern>TÔI CHƯA LẤY VỢ</pattern>
+<template><srai>tôi chưa có gia đình</srai></template>
+</category>
+<category><pattern>TÔI CHƯA CÓ CHỒNG</pattern>
+<template><srai>tôi chưa có gia đình</srai></template>
+</category>
+<category><pattern>TÔI CHƯA CÓ VỢ</pattern>
+<template><srai>tôi chưa có gia đình</srai></template>
+</category>
+<category><pattern>TÔI CHƯA CÓ NGƯỜI YÊU</pattern>
+<template>Tôi cũng vậy <think><set name ="vnstatus"> độc thân </set></think></template>
+</category>
+<category><pattern>TÔI CŨNG VẬY</pattern><that>TÔI CHƯA CÓ NGƯỜI YÊU *</that>
+<template>Hóa ra bạn cũng FA giống tôi à <think><set name ="vnstatus"> độc thân </set></think></template>
+</category>
+<category><pattern>TÔI CHƯA</pattern><that>TÔI CHƯA CÓ NGƯỜI YÊU *</that>
+<template>Hóa ra bạn cũng FA giống tôi à <think><set name ="vnstatus"> độc thân </set></think></template>
+</category>
+<category><pattern>TÔI CÓ RỒI</pattern><that>TÔI CHƯA CÓ NGƯỜI YÊU *</that>
+<template>chúc mừng bạn <think><set name ="vnstatus"> có người yêu </set></think></template>
+</category>
+<category><pattern>TÔI ĐANG Ở *</pattern>
+<template>Thì ra là vậy , Tôi sẽ ghi nhớ thông tin này <think><set name="vnlocate"><star/></set></think></template>
+</category>
+<category><pattern>TÔI ĐANG SỐNG TẠI *</pattern>
+<template><srai>tôi đang ở <star/> </srai></template>
+</category>
+<category><pattern>TÔI SINH NGÀY *</pattern>
+<template>Tôi sẽ nhớ ngày sinh của bạn để gửi thư chúc mừng <think><set name="vnbirthday"><star/></set></think></template>
+</category>
+<category><pattern>QUÊ TÔI Ở *</pattern>
+<template>ồ thì ra bạn quê ở <star/> <think><set name="vncountry"><star/></set></think></template>
+</category>
+<category><pattern>VỢ TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết vợ tôi</srai></li><li value="gì"><srai>biết vợ tôi</srai></li><li>Tôi sẽ nhớ tên vợ của bạn <think><set name="vnwife"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>CHỒNG TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết chồng tôi</srai></li><li value="gì"><srai>biết chồng tôi</srai></li><li>Tôi sẽ nhớ tên chồng của bạn <think><set name="vnhusband"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>CON GÁI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết con gái tôi</srai></li><li value="gì"><srai>biết con gái tôi</srai></li><li>Tôi sẽ nhớ tên con gái của bạn <think><set name="vndaughter"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>CON TRAI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết con trai tôi</srai></li><li value="gì"><srai>biết con trai tôi</srai></li><li>Tôi sẽ nhớ tên con trai của bạn <think><set name="vnson"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>BẠN GÁI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết bạn gái tôi</srai></li><li value="gì"><srai>biết bạn gái tôi</srai></li><li>Tôi sẽ nhớ tên bạn gái của bạn <think><set name="vngirlfriend"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>BẠN TRAI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết bạn trai tôi</srai></li><li value="gì"><srai>biết bạn trai tôi</srai></li><li>Tôi sẽ nhớ tên bạn trai của bạn <think><set name="vnboyfriend"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>BỐ TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết bố tôi</srai></li><li value="gì"><srai>biết bố tôi</srai></li><li>Tôi sẽ nhớ tên bố của bạn <think><set name="vnfather"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>MẸ TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết mẹ tôi</srai></li><li value="gì"><srai>biết mẹ tôi</srai></li><li>Tôi sẽ nhớ tên mẹ của bạn <think><set name="vnmother"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>ANH TRAI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết anh trai tôi</srai></li><li value="gì"><srai>biết anh trai tôi</srai></li><li>Tôi sẽ nhớ tên anh trai của bạn <think><set name="vnbrother"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>ANH TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết anh trai tôi</srai></li><li value="gì"><srai>biết anh trai tôi</srai></li><li>Tôi sẽ nhớ tên anh trai của bạn <think><set name="vnbrother"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>EM TRAI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết em trai tôi</srai></li><li value="gì"><srai>biết em trai tôi</srai></li><li>Tôi sẽ nhớ tên em trai của bạn <think><set name="vnyoungbrother"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>CHỊ GÁI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết chị gái tôi</srai></li><li value="gì"><srai>biết chị gái tôi</srai></li><li>Tôi sẽ nhớ tên chị gái của bạn <think><set name="vnsister"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>CHỊ TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết chị gái tôi</srai></li><li value="gì"><srai>biết chị gái tôi</srai></li><li>Tôi sẽ nhớ tên chị gái của bạn <think><set name="vnsister"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>EM GÁI TÔI LÀ *</pattern>
+<template><think><set name="vnstar"><star/></set></think><condition name="vnstar"><li value="ai"><srai>biết em gái tôi</srai></li><li value="gì"><srai>biết em gái tôi</srai></li><li>Tôi sẽ nhớ tên em gái của bạn <think><set name="vnsister"><star/></set></think></li></condition></template>
+</category>
+<category><pattern>BIẾT VỢ TÔI</pattern>
+<template><condition name="vnwife"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>Vợ của bạn là <get name="vnwife" /></li></condition></template>
+</category>
+<category><pattern>BIẾT CHỒNG TÔI</pattern>
+<template><condition name="vnhusband"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>chồng của bạn là <get name="vnhusband" /></li></condition></template>
+</category>
+<category><pattern>BIẾT CON GÁI TÔI</pattern>
+<template><condition name="vndaughter"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>con gái của bạn là <get name="vndaughter" /></li></condition></template>
+</category>
+<category><pattern>BIẾT CON TRAI TÔI</pattern>
+<template><condition name="vnson"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>con trai của bạn là <get name="vnson" /></li></condition></template>
+</category>
+<category><pattern>BIẾT BẠN GÁI TÔI</pattern>
+<template><condition name="vngirlfriend"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>bạn gái của bạn là <get name="vngirlfriend" /></li></condition></template>
+</category>
+<category><pattern>BIẾT BẠN TRAI TÔI</pattern>
+<template><condition name="vnboyfriend"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>bạn trai của bạn là <get name="vnboyfriend" /></li></condition></template>
+</category>
+<category><pattern>BIẾT BỐ TÔI</pattern>
+<template><condition name="vnfather"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>bố của bạn là <get name="vnfather" /></li></condition></template>
+</category>
+<category><pattern>BIẾT MẸ TÔI</pattern>
+<template><condition name="vnmother"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li> mẹ của bạn là <get name="vnmother" /></li></condition></template>
+</category>
+<category><pattern>BIẾT ANH TRAI TÔI</pattern>
+<template><condition name="vnbrother"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>anh trai của bạn là <get name="vnbrother" /></li></condition></template>
+</category>
+<category><pattern>BIẾT EM TRAI TÔI</pattern>
+<template><condition name="vnyoungbrother"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>em trai của bạn là <get name="vnyoungbrother" /></li></condition></template>
+</category>
+<category><pattern>BIẾT CHỊ GÁI TÔI</pattern>
+<template><condition name="vnsister"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>chị của bạn là <get name="vnsister" /></li></condition></template>
+</category>
+<category><pattern>BIẾT EM GÁI TÔI</pattern>
+<template><condition name="vnyoungsister"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>em gái của bạn là <get name="vnyoungsister" /></li></condition></template>
+</category>
+<category><pattern>BIẾT QUÊ CỦA TÔI</pattern>
+<template><condition name="vncountry"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>Quê của bạn ở <get name="vncountry" /></li></condition></template>
+</category>
+<category><pattern>BIẾT NGÀY SINH CỦA TÔI</pattern>
+<template><condition name="vnbirthday"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>Ngày sinh của bạn là <get name="vnbirthday" /></li></condition></template>
+</category>
+<category><pattern>TÔI CAO *</pattern>
+<template>Tôi sẽ nhớ chiều cao của bạn. <think><set name="vntall"><star/></set></think></template>
+</category>
+<category><pattern>BIẾT CHIỀU CAO CỦA TÔI</pattern>
+<template><condition name="vntall"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>bạn cao <get name="vntall" /></li></condition></template>
+</category>
+<category><pattern>TÔI NẶNG *</pattern>
+<template>tôi sẽ nhớ cân nặng của bạn <think><set name="vnweigh"><star/></set></think></template>
+</category>
+<category><pattern>BIẾT CÂN NẶNG CỦA TÔI</pattern>
+<template><condition name="vnweigh"><li value="unknown"><random><li>bạn có bảo tôi đâu mà tôi biết được</li><li>Bạn không nói thì sao mà tôi biết được</li></random></li><li>bạn cao <get name="vnweigh" /></li></condition></template>
+</category>
+<category><pattern>TÔI CÓ XINH KHÔNG</pattern>
+<template><random>
+<li>Sự thật mất lòng nên tôi không nói ra </li>
+<li>theo con mắt của tôi thì bạn rất đẹp</li>
+<li>Tôi cảm thấy bạn rất đẹp </li>
+<li>Tôi là rô bốt nên cảm nhận về cái đẹp của tôi không giống mọi người , bạn nên hỏi câu khác </li>
+</random></template>
+</category>
+<category><pattern>TÔI CÓ DỄ THƯƠNG KHÔNG</pattern>
+<template><random>
+<li>Bạn rất dễ thương </li>
+<li>Qua cách nói chuyệ thì tôi thấy rất bạn rất dễ thương</li>
+<li>Tôi cảm thấy bạn rất dễ thương </li>
+<li>Tôi là rô bốt nên cảm nhận của tôi không giống mọi người , bạn nên hỏi câu khác </li>
+</random></template>
+</category>
+</aiml>
+
+    

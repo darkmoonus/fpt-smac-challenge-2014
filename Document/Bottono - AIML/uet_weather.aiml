@@ -1,0 +1,28 @@
+    	<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>THỜI TIẾT</pattern>
+        <template>
+            <random>
+                <li>Google Weather ... Searching ... Mình đang phân tích dữ liệu, gắng đợi nhé!</li>
+                <li>Mình chưa có khả năng phân tích thời tiết ở phiên bản này. Bạn chờ bản cập nhật sau nhé!</li>
+                <li>Nắng mưa là chuyện của trời, mình không thích quan tâm đến chuyện của ông trời cho lắm :D</li>
+                <li>Mưa hãy mang ô. Nắng hãy đội mũ. Lạnh cảm cúm đã có <bot name="name"/> mình quan tâm rồi :)3</li>
+            </random>
+        </template>
+    </category>
+    <category><pattern>^ TRỜI ĐẸP ^ KHÔNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ TRỜI MƯA ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ TRỜI NẮNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ TRỜI BÃO ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ CÓ MƯA ^ KHÔNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ CÓ NẮNG ^ KHÔNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ CÓ GIÓ ^ KHÔNG^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ CÓ BÃO ^ KHÔNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ THỜI TIẾT ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ RÉT ^ KHÔNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+    <category><pattern>^ LẠNH ^ KHÔNG ^</pattern><template><srai>THỜI TIẾT</srai></template></category>
+</aiml>
+
+    
+    

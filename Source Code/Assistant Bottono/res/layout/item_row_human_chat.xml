@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:paddingRight="5dp"
+        android:background="#CCFFFF"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="Human"
+            android:textColor="@color/gray"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <uet.invincible.assistant.customize.MyTextView
+            android:id="@+id/item_row_human_chat_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/gray"
+            android:textSize="13dp" />
+
+        <uet.invincible.assistant.customize.MyTextView
+            android:id="@+id/item_row_human_chat_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/gray_light"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="3dp"
+        android:layout_height="match_parent"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="10dp"
+            android:background="@drawable/triangle_chat_human" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/avatar_tuan" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Wabo Bottono</string>
+    <string name="title_activity_robot_demo">RobotDemoActivity</string>
+    <string name="action_settings">Scan robot</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_robot">RobotActivity</string>
+    <string name="title_activity_demo_robot">DemoRobotActivity</string>
+
+</resources>
